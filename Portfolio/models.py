@@ -26,3 +26,22 @@ class EducationInfo(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class JobInfo(models.Model):
+    title = models.CharField(max_length=200)
+    Upper_title = models.CharField(max_length=200)
+    data = models.CharField(max_length=200)
+    address = models.CharField(max_length=200)
+    company = models.CharField(max_length=200)
+    website =models.CharField(max_length=200)
+    body1 = models.TextField()
+    body2 = models.TextField()
+    body3 = models.TextField()
+    body4 = models.TextField()
+    body5 = models.TextField()
+    information = models.TextField()
+    image = models.ImageField(upload_to="personal/")
+
+    def __str__(self):
+        return self.title

@@ -13,16 +13,16 @@
         <h1>Mukhammad Ibrokhimov</h1>
         <h2>(he/him)</h2>
         <p>Software Engineer</p>
-        <button><a href="{% url 'contact' %}">EMAIL ME</a></button>
+        <button class="button"><a href="{% url 'contact' %}">EMAIL ME</a></button>
     </div>
     <div class="right">
         <h2>About Me</h2>
         <h3>{{ profile_info.address }}</h3>
         <p>{{ profile_info.profile }}</p>
         <a href="{% static 'files/EN_MukhammadIbrokhimov.pdf' %}" download>
-            <button>Resume</button>
+            <button class="button">Resume</button>
         </a>
-        <button>Portfolio</button>
+        <button class="button">Portfolio</button>
     </div>
 </div>
 <div class="main_container_rate">

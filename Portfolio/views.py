@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView, DetailView
-from .models import ProfileInfo, EducationInfo
+from django.views.generic import TemplateView, ListView
+from .models import ProfileInfo, EducationInfo, JobInfo
 
 
 # Create your views here.
@@ -18,18 +18,25 @@ class HomeView(TemplateView):
 
 
 # my educational background
-class EduView(TemplateView):
+class EduView(ListView):
+    model = EducationInfo
     template_name = 'Education.html'
+    context_object_name = 'edu_info'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        edu_info =EducationInfo.objects.first()
-        context['edu_info'] = edu_info
+        context['edu_info'] = EducationInfo.objects.first()
         return context
 
 
-class JobView(DetailView):
+class JobView(ListView):
+    model = JobInfo
     template_name = 'job.html'
+    context_object_name = 'job_info'
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['job_info'] = JobInfo.objects.first()
+        return context
 
 
 class ContactView(TemplateView):

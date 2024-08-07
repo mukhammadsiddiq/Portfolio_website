@@ -2,6 +2,23 @@
     padding: 100px 20px;
 }
 
+
+.button {
+    border: none;
+    background: linear-gradient(to right, #1345e6 0%, #ed239F 51%, #1345e6 100%);
+    background-size: 200% auto;
+    color: #ffff;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 1,26rem 2.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+.button:hover {
+    background-position: right center;
+}
+
 .textarea, input {
     width: 100%;
     padding: 10px;

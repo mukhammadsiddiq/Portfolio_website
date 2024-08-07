@@ -5,8 +5,8 @@ from .views import HomeView, EduView, JobView, ContactView
 
 urlpatterns = [
     path('contact/', ContactView.as_view(), name='contact'),
-    path('my_jobs/', JobView.as_view(), name='about_job'),
-    path('Education/', EduView.as_view(), name='about_me'),
+    path('experience/', JobView.as_view(), name='about_job'),
+    path('education/', EduView.as_view(), name='about_me'),
     path('', HomeView.as_view(), name='home')
 ]
 if settings.DEBUG:

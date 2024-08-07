@@ -1,0 +1,60 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.job_title {
+    margin-bottom: 0px;
+}
+.job_period {
+    font-size: smaller;
+    font-weight: normal;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.button {
+    border: none;
+    background: linear-gradient(to right, #1345e6 0%, #ed239F 51%, #1345e6 100%);
+    background-size: 200% auto;
+    color: #ffff;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 1,26rem 2.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+.button:hover {
+    background-position: right center;
+}
+.container_job {
+  display: flex;
+}
+
+.image {
+  width: 50%;
+  height: 70%;
+  padding: 20px;
+}
+
+.text {
+  width: 50%;
+  padding: 20px;
+}
+
+.text h1 {
+  color: #007bff;
+}
+
+.text p {
+  color: #333;
+  font-size: 16px;
+}
+
+.text h2 {
+  color: #007bff;
+}
+
+.text a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}

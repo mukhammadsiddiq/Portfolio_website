@@ -1,10 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/job.css' %}">
 </head>
 <body>
-
+{% for post in object_list %}
+<div class="container_job">
+  <div class="image">
+    <br><br><br><br><br><br>
+    <img src="{{ post.image.url }}" alt="Restaurant Image" width="100%">
+  </div>
+  <div class="text">
+    <br><br><br>
+    <h1>______________________________</h1>
+    <h1 class="job_title">{{ post.title }}</h1>
+    <p class="job_period"><a href="{{ post.website }}">{{post.website}}</a> | {{ post.data}} | {{post.address}}</p>
+    <ul>
+      <li><p>{{ post.body1 }}</p></li>
+      <li><p>{{ post.body2 }}</p></li>
+      <li><p>{{ post.body3 }}</p></li>
+      <li><p>{{ post.body4 }}</p></li>
+      <li><p>{{ post.body5 }}</p></li>
+      <button class="button"><a href="#">SHOW ALL</a></button>
+    </ul>
+  </div>
+</div>
 </body>
-</html>
+{% endfor %}
+{% endblock content %}

@@ -194,6 +194,10 @@ body{
   background: linear-gradient(90deg, #1345e6 0%, #ed239f 100%);
 
 }
+
+.footer-social:hover {
+    background-position: right center;
+}
 .footer-socials{
   margin-top: 40px;
 }
