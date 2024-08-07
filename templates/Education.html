@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/edu.css' %}">
+</head>
+<div class="edu">
+
+<div class="container_edu">
+  <div class="left">
+    <br><br><br>
+    <h1>______________________________</h1>
+    <ul>
+      <h1 class="title"><strong>{{ edu_info.title }}</strong></h1>
+      <p class="study_period">{{ edu_info.address}} | {{edu_info.website}}</p>
+      <p class="study_period">{{edu_info.subject}} | {{ edu_info.data}} </p>
+      <p>{{ edu_info.body }}</p>
+      <p><a href="{{ edu_info.website }}">{{ edu_info.information }}</a></p>
+    </ul>
+  </div>
+  <div class="right_edu">
+    <br><br><br><br><br>
+    <img src="{{ edu_info.image.url }}" alt="University_Image">
+  </div>
+</div>
+
+</div>
+{% endblock content %}

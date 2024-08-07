@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    <link rel="icon" href="{% static 'images/Logoforportfolio.jpeg' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<!-- Header section-->
+    <div class="container">
+        <header class="main-header">
+            <div class="main-header__brand">
+                <a href="{% url 'home' %}">
+                    <img src="{% static 'images/Logoforportfolio.jpeg' %}" alt="logo">
+                </a>
+            </div>
+            <nav class="main-navigation">
+                <ul class="main-navigation__items">
+                    <li class="main-navigation__item active">
+                        <a href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="main-navigation__item">
+                        <a href="{% url 'about_me' %}">Educational Background</a>
+                    </li>
+                    <li class="main-navigation__item">
+                        <a href="{% url 'about_job' %}">Professional Experiences</a>
+                    </li>
+                    <li class="main-navigation__item">
+                        <a href="{% url 'contact' %}">contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <div>
+    {% block content %}
+    {% endblock content %}
+    </div>
+       <!-- Footer section-->
+    <footer class="footer">
+        <div class="footer-brand">
+        <img class="footer__image" src="{% static 'images/Logoforportfolio.jpeg' %}" alt="">
+        </div>
+        <div class="container">
+            <nav class="footer-navigation">
+                <ul class="main-navigation__items">
+                    <li class="main-navigation__item active">
+                        <a href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="main-navigation__item">
+                        <a href="{% url 'about_me' %}">Educational Background</a>
+                    </li>
+                    <li class="main-navigation__item">
+                        <a href="{% url 'about_job' %}">Professional Experiences</a>
+                    </li>
+                    <li class="main-navigation__item">
+                        <a href="{% url 'contact' %}">contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <ul class="footer-socials">
+                <li class="footer-social">
+                    <a href="https://t.me/IbrokhimovMukhammad"><i class="fa-brands fa-telegram"></i></a>
+                </li>
+                <li class="footer-social">
+                    <a href="https://instagram.com/ibroximov_m_"><i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li class="footer-social">
+                    <a href="https://www.linkedin.com/in/ibroximov"> <i class="fa-brands fa-linkedin"></i></a>
+                </li>
+                <li class="footer-social">
+                    <a href="https://github.com/mukhammadsiddiq"> <i class="fa-brands fa-github"></i></a>
+                </li>
+            </ul>
+            <p class="footer-text">
+            Copyright&2024 all rights reserved | Mukhammad Ibrokhimov
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
