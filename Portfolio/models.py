@@ -9,6 +9,11 @@ class ProfileInfo(models.Model):
     address = models.CharField(max_length=120)
     image = models.ImageField(upload_to='personal/')
     resume = models.FileField(upload_to='files/')
+    year_experience = models.CharField(max_length=120, default='2+')
+    instagram = models.CharField(max_length=120, default='https://instagram.com/ibroximov_m_')
+    telegram = models.CharField(max_length=120, default='https://t.me/IbrokhimovMukhammad')
+    linkedin = models.CharField(max_length=120, default='https://www.linkedin.com/in/ibroximov')
+    github = models.CharField(max_length=120, default='https://github.com/mukhammadsiddiq')
 
     def __str__(self):
         return self.title

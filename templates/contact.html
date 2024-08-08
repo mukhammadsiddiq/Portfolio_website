@@ -1,23 +1,35 @@
-{%extends 'base.html'%}
+{% extends 'base.html' %}
+{% load static %}
+
 {% block content %}
     <div class="container">
-        <section class="contact">
-            <div class="section-title">
-            Get in touch with me
-            </div>
-            <form action="/server.php" method="get">
+    <section class="contact">
+        <div class="section-title">
+            Get in touch with us
+        </div>
+        <form> {% csrf_token %}
             <div class="textarea">
-                <textarea name="message" rows="10" placeholder="Text a message"></textarea>
+                <textarea id="message" name="message" rows="10" placeholder="Text a message"></textarea>
+
             </div>
+
             <div class="half-row" contact__first-name>
-                <input type="text" placeholder="Your name" name="First name">
+                <input type="name" placeholder="Your email" name="email" id="name">
             </div>
             <div class="half-row contact__email">
-                <input type="email" name="email" id="email" placeholder="Your email">
+                <input type="name" id="email" placeholder="Your name">
             </div>
-            <input type="text" placeholder="meaning of message" name="Subjecrt">
-            <button class="button" type="submit"> Submit</button>
-            </form>
-        </section>
-    </div>
+            <button class="button" type="submit" onclick="sendMail()"> Submit</button>
+        </form>
+    </section>
+   </div>
+
+    <!-- Include EmailJS JavaScript SDK -->
+    <script src="{% static 'js/emailing.js' %}"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("sbVJTBTbZPHv_Q_7V");
+        })();
+    </script>
 {% endblock content %}
