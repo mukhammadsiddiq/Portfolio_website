@@ -1,164 +1,147 @@
-    /* Main home*/
-    .container_home {
-        font-family: sans-serif;
-        margin: 0;
-        display: flex;
-    }
+/* Main Home */
+.container_home {
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+}
 
 
-    .container_home {
-        display: flex;
-        width: 100%;
-        background-color: #fffff;
-    }
-    .left {
-        width: 50%;
+.container_home {
+    display: flex;
+    width: 100%;
+    background-color: #fffff;
+}
+.left {
+    width: 50%;
+    padding: 50px;
+    background-color: #fffff;
+}
+.right {
+    width: 50%;
+    padding: 50px;
+    background-color: #ddd;
+}
+
+.container_home .left .image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.container_home h1, .container_home h2, .container_home p {
+    text-align: left;
+}
+
+.container_home .button a {
+    text-decoration: none;
+    color: white;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+    .container_home .left, .container_home .right {
+        width: 40%;
         padding: 50px;
-        background-color: #fffff;
     }
-    .right {
-        width: 50%;
-        padding: 50px;
-        background-color: #ddd;
-    }
-
-    .Details {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .social {
-        margin-top: 20px;
-        display: flex;
-        justify-content: center;
-    }
-    .social a {
-        display: inline-block;
-        margin: 0 10px;
-        font-size: 24px;
-    }
-    button {
-        padding: 10px 20px;
-        background-color: #000;
-        color: #fff;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px;
-        margin-top: 20px;
-    }
-    .image {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 300px;
-    }
-    .image img {
-        max-width: 70%;
-    }
-
-/* Satisfaction*/
-.main_container_rate {
-    background-color: #ffffff;
-    font-family: Arial, sans-serif;
 }
 
-.container_rate {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 30vh;
-}
-
-.box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 20px;
-}
-
-.number {
-  font-size: 48px;
-  color: #80b3c4;
-  font-weight: bold;
-}
-
-.text {
-  font-size: 18px;
-  margin-top: 10px;
-}
-
-/*about skills section*/
+/* Skills Section */
 .container_skills {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
 }
-
-.card {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  padding: 20px;
-  width: 300px;
-}
-
-.card-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.card-text {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #333;
-}
-
 .card-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    margin-bottom: 10px;
+    width: 100%;             /* Ensure the image container takes up the full width of the card */
+    height: 150px;           /* Set a fixed height if needed, adjust as required */
 }
 
 .card-image img {
-  max-width: 100px;
-  max-height: 100px;
+    max-width: 100%;         /* Make the image responsive */
+    max-height: 100%;        /* Ensure the image does not exceed the container height */
+    object-fit: contain;     /* Maintain the aspect ratio of the image */
 }
 
 .card-image i {
     font-size: 5em;
     color: #007bff !important; /* Ensure this is present and correct */
+    text-align: center;        /* Center text within the icon if needed */
 }
 
-/* skills section*/
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+}
+
+@media (min-width: 768px) {
+    .card {
+        width: 30%;
+    }
+}
+
+/* Skills Section */
 .sk {
     font-family: sans-serif;
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
 }
-
-.sk h1 {
-    text-align: center;
-    margin-bottom: 20px;
+.skills-title, .skills-description {
+    text-align: center; /* Center text horizontally */
+    margin: 0 auto; /* Center element horizontally if it has a set width */
 }
 
-.sk p {
-    text-align: center;
-    margin-bottom: 40px;
+.skills-title {
+    font-size: 2.5rem; /* Adjust font size */
+    font-weight: bold; /* Bold text */
+    margin-bottom: 20px; /* Space below the title */
+    color: #007bff; /* Optional: Add a color */
 }
 
-.skill-columns {
+.skills-description {
+    font-size: 1.2rem; /* Adjust font size */
+    max-width: 800px; /* Optional: Set a max width for better readability */
+    margin-bottom: 40px; /* Space below the paragraph */
+    color: #333; /* Optional: Add a color */
+    line-height: 1.6; /* Improve readability with better line spacing */
+}
+
+/* Optional: Add a container for better control and responsiveness */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    padding: 20px;
+    max-width: 1000px; /* Optional: Set a max width for the container */
+    margin: 0 auto; /* Center the container */
+}
+
+.sk .skill-columns {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.left-column,
-.right-column {
+.sk .left-column, .sk .right-column {
     flex: 1;
     min-width: 300px;
     margin: 10px;
@@ -177,33 +160,6 @@
     margin-bottom: 20px;
 }
 
-.right-column .skill-container {
-    padding: 15px; /* Reduce padding for right column */
-    transform: scale(0.9); /* Scale down the right column items */
-}
-
-.skill-icon {
-    width: 40px;
-    height: 40px;
-    background-color: #007bff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    margin-bottom: 20px;
-}
-
-.skill-icon i {
-    font-size: 20px;
-    color: #fff;
-}
-
-.skill-name h2,
-.skill-name p {
-    margin: 0;
-    margin-bottom: 10px;
-}
-
 .skill-progress {
     width: 100%;
     height: 10px;
@@ -220,15 +176,38 @@
     position: absolute;
     left: 0;
     top: 0;
-    width: 0%;
     transition: width 0.5s ease;
 }
 
-.skill-percentage {
-    position: absolute;
-    right: 10px;
-    top: -20px;
-    font-size: 12px;
-    color: #007bff;
+/* Rating Section */
+.main_container_rate {
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    padding: 20px;
 }
 
+.container_rate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.number {
+    font-size: 48px;
+    color: #80b3c4;
+    font-weight: bold;
+}
+
+.text {
+    font-size: 18px;
+    margin-top: 10px;
+}

@@ -1,19 +1,30 @@
 .edu {
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .title {
-    margin-bottom: 5px;
-}
-.study_period {
-    font-size: smaller;
-    font-weight: normal;
-    margin-bottom: 0;
-    margin-top: 0;
-}
-.container_edu {
-  display: flex;
+  margin-bottom: 5px;
 }
 
+.study_period {
+  font-size: smaller;
+  font-weight: normal;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.left h1 {
+    font-size: 2.5rem; /* Adjust font size */
+    font-weight: bold; /* Bold text */
+    margin-bottom: 20px; /* Space below the title */
+    color: #007bff; /* Optional: Add a color */
+}
+
+.container_edu {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically by default */
+  align-items: center; /* Center elements on mobile */
+}
 .left {
   width: 50%;
   padding: 20px;
@@ -28,4 +39,26 @@
 img {
   width: 100%;
   height: auto;
+}
+/* Media Queries for larger screens */
+@media (min-width: 768px) {
+  .container_edu {
+    flex-direction: row; /* Side-by-side layout for medium and larger screens */
+    align-items: flex-start; /* Align items at the start */
+  }
+
+  .right_edu {
+    width: 45%; /* Image container takes 40% width on larger screens */
+    order: 2; /* Image on the left on larger screens */
+    margin-right: 20px; /* Add space to the right */
+  }
+
+  .left {
+    width: 45%; /* Text container takes 60% width on larger screens */
+    order: 1; /* Text on the right */
+  }
+
+  img {
+    margin-bottom: 0; /* Remove margin for side-by-side layout */
+  }
 }
