@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView, ListView
-from .models import ProfileInfo, EducationInfo, JobInfo
+from .models import ProfileInfo, EducationInfo, JobInfo, PartTime
 
 
 # Create your views here.
@@ -29,13 +29,13 @@ class EduView(ListView):
         return context
 
 
-class JobView(ListView):
-    model = JobInfo
-    template_name = 'job.html'
-    context_object_name = 'job_info'
+class JobView(TemplateView):
+    template_name = 'job.html'  # Name of your combined template
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['job_info'] = JobInfo.objects.first()
+        context['job_info_list'] = JobInfo.objects.all()  # QuerySet for JobInfo
+        context['parttime_info_list'] = PartTime.objects.all()  # QuerySet for PartTime
         return context
 
 

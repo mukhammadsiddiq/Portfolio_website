@@ -50,3 +50,18 @@ class JobInfo(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class PartTime(models.Model):
+    title = models.CharField(max_length=200, default="Fill the form")
+    data = models.CharField(max_length=200, default="Fill the form")
+    address = models.CharField(max_length=200, default="Fill the form")
+    company = models.CharField(max_length=200, default="Fill the form")
+    website = models.CharField(max_length=200, default="Fill the form")
+    information = models.TextField(default="Fill the form")
+    body = models.TextField(default="Fill the form")
+    image = models.ImageField(upload_to="personal/", default="Fill the form")
+
+    def __str__(self):
+        return self.title
+

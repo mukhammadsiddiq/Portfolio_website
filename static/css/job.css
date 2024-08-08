@@ -58,3 +58,62 @@ body {
   color: #007bff;
   font-weight: bold;
 }
+
+/* part time  */
+.container_parttime {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap; /* Allow wrapping to the next line if needed */
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1 1 calc(33.333% - 20px); /* Adjust for 3 cards per row with space between */
+    box-sizing: border-box;
+    max-width: calc(33.333% - 20px); /* Ensure three cards fit in one line */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-title {
+    font-size: 1.2rem; /* Adjust font size as needed */
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.card-text {
+    font-size: 0.9rem; /* Adjust font size as needed */
+    line-height: 1.4;
+    color: #333;
+}
+
+.card-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%; /* Ensure the image container takes up the full width of the card */
+}
+
+.card-image img {
+    width: 100%; /* Make the image fill the container width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 150px; /* Limit the height of the image */
+    object-fit: cover; /* Ensure the image covers the container */
+}
+
+/*line*/
+.parttime-title {
+    text-align: center; /* Centers the text horizontally */
+    color: #007bff; /* Change this to your desired color */
+    font-size: 2rem; /* Adjust font size as needed */
+    margin: 20px 0; /* Adjust margin to control spacing above and below */
+}
+
+
